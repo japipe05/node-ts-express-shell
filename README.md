@@ -20,3 +20,10 @@ Cada paso de su configuración ya se ha realizado previamente en el curso, por l
 
 ## jsonwebtoken para las sesiones
 1. npm i jsonwebtoken
+
+## Mails
+a. https://github.com/Klerith/node-noc/blob/fin-seccion-12/src/presentation/email/email.service.ts
+b. https://myaccount.google.com/security
+c. https://myaccount.google.com/u/0/apppasswords?rapt=AEjHL4MTsjAPRWzUmuirixez5ttDVSzCbkRGCQoFk4UJrdkdshbPObbVuXPk-sDKrMipwDmhzh1TUq1-P3ORxf5N-yGuKWT27YkqjKSHaowuv4YhDdKL8HI
+1. > npm i nodemailer
+
