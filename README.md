@@ -12,3 +12,11 @@ Cada paso de su configuración ya se ha realizado previamente en el curso, por l
 3. En caso de necesitar base de datos, configurar el docker-compose.yml y ejecutar `docker-compose up -d` para levantar los servicios deseados.
 4. Ejecutar `npm run dev` para levantar el proyecto en modo desarrollo
 
+## Base de datos mongoose
+1. > npm i mongoose
+
+## Encryptar contraseñas
+1. npm i bcryptjs
+
+## jsonwebtoken para las sesiones
+1. npm i jsonwebtoken
