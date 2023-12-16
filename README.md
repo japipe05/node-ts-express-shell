@@ -30,6 +30,18 @@ c. https://myaccount.google.com/u/0/apppasswords?rapt=AEjHL4MTsjAPRWzUmuirixez5t
 
 ## publicar un puerto en producción 
 1. inicio sesion https://dashboard.ngrok.com/get-started/your-authtoken
-1..1sobre el proyecto:   docker run -it -e NGROK_AUTHTOKEN=2ZYG1BQhgC96HSLZgedJTb2Vp0a_3Cpu8B7n44eUBTNnbUR1y ngrok/ngrok http 192.423.2341.12431243:3000
-nota:mi ip : 192.423.2341.12431243
+1..1 docker run -it -e NGROK_AUTHTOKEN=2ZYG1BQhgC96HSLZgedJTb2Vp0a_3Cpu8B7n44eUBTNnbUR1y ngrok/ngrok http  253.2345.2345.2345:3000
+nota 253.2345.2345.2345: mi ip 4 del pc y el puerqto que corre el proyecto
+
+o > docker run -it --env-file .env ngrok/ngrok http 253.2345.2345.2345:3000
 2. https://ngrok.com/download
+
+si lo cierro 
+
+docker ps -a
+
+docker exec -it NOMBRE_O_ID_DEL_CONTENEDOR /bin/sh
+docker start d02a10dfe48b
+docker exec -it 0e8df8024891 /bin/sh
+
+ngrok tcp 3000

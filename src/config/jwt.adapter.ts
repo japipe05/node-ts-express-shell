@@ -15,12 +15,12 @@ export class JwtAdpater{
         });
     }
 
-    static validateToken(token:string){
+    static validateToken<T>(token:string):Promise<T|null>{
         //throw new Error('Not implemented');
         return new Promise((resolve)=>{
             jwt.verify(token, JWT_SEED,(err, decoded)=>{
                 if(err) return  resolve(null);
-                resolve(decoded);
+                resolve(decoded as T);
             });
         });
     }
