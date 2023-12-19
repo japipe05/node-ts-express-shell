@@ -34,5 +34,12 @@ import mongoose from "mongoose";
             enum: ['ADMIN_ROLE','USER_ROLE'],
         },
     });
-
+    userSchema.set('toJSON',{
+        virtuals:true,
+        versionKey: false,
+        transform: function(doc, ret, options){
+            delete ret._id;
+            delete ret.password;
+        }
+    });
     export const userModel = mongoose.model('User',userSchema);

@@ -23,5 +23,11 @@ import mongoose, { Schema } from "mongoose";
             require: true
         }
     });
-
+    categorySchema.set('toJSON',{
+        virtuals:true, //cambia _id por id
+        versionKey: false, // quita __V
+        transform: function(doc, ret, options){
+            delete ret._id; //Borra el _id que ya lo cambio
+        }
+    });
     export const CategoryModel = mongoose.model('Category',categorySchema);

@@ -13,7 +13,7 @@ import mongoose, { Schema } from "mongoose";
             required: [true,'Name is Required'],
             unique: true,
         },
-        avauilable:{
+        available:{
             type: Boolean,
             default: false,
         },
@@ -36,5 +36,11 @@ import mongoose, { Schema } from "mongoose";
         }
 
     });
-
+    producSchema.set('toJSON',{
+        virtuals:true,
+        versionKey: false,
+        transform: function(doc, ret, options){
+            delete ret._id;
+        }
+    });
     export const ProducModel = mongoose.model('Product',producSchema);
