@@ -45,3 +45,10 @@ docker start d02a10dfe48b
 docker exec -it 0e8df8024891 /bin/sh
 
 ngrok tcp 3000
+
+# seed borra los datos y recrea 
+> npm run seed
+
+# Files
+> npm i uuid
+> npm i express-fileupload
